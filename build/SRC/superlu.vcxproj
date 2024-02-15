@@ -1,0 +1,489 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <PreferredToolArchitecture>x64</PreferredToolArchitecture>
+  </PropertyGroup>
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="MinSizeRel|x64">
+      <Configuration>MinSizeRel</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="RelWithDebInfo|x64">
+      <Configuration>RelWithDebInfo</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{7FDC0E01-CEA2-32E0-97CE-A1C543E5C23C}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <WindowsTargetPlatformVersion>10.0.22621.0</WindowsTargetPlatformVersion>
+    <Platform>x64</Platform>
+    <ProjectName>superlu</ProjectName>
+    <VCProjectUpgraderObjectName>NoUpgrade</VCProjectUpgraderObjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.20506.1</_ProjectFileVersion>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Hexadrive\superlu\build\SRC\Debug\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">superlu.dir\Debug\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">superlu</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">.lib</TargetExt>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Hexadrive\superlu\build\SRC\Release\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">superlu.dir\Release\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Release|x64'">superlu</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='Release|x64'">.lib</TargetExt>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\Hexadrive\superlu\build\SRC\MinSizeRel\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">superlu.dir\MinSizeRel\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">superlu</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">.lib</TargetExt>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\Hexadrive\superlu\build\SRC\RelWithDebInfo\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">superlu.dir\RelWithDebInfo\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">superlu</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">.lib</TargetExt>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>C:\Hexadrive\superlu\build\SRC;C:\Hexadrive\superlu\SRC;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <ExceptionHandling>
+      </ExceptionHandling>
+      <InlineFunctionExpansion>Disabled</InlineFunctionExpansion>
+      <Optimization>Disabled</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <UseFullPaths>false</UseFullPaths>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);USE_VENDOR_BLAS;WIN32;_WINDOWS;NOMINMAX;_COMPLEX_DEFINED;CMAKE_INTDIR="Debug"</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_DEBUG;USE_VENDOR_BLAS;_WINDOWS;NOMINMAX;_COMPLEX_DEFINED;CMAKE_INTDIR=\"Debug\"</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>C:\Hexadrive\superlu\build\SRC;C:\Hexadrive\superlu\SRC;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>C:\Hexadrive\superlu\build\SRC;C:\Hexadrive\superlu\SRC;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Lib>
+      <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>C:\Hexadrive\superlu\build\SRC;C:\Hexadrive\superlu\SRC;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <ExceptionHandling>
+      </ExceptionHandling>
+      <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
+      <Optimization>MaxSpeed</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <UseFullPaths>false</UseFullPaths>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);USE_VENDOR_BLAS;WIN32;_WINDOWS;NDEBUG;NOMINMAX;_COMPLEX_DEFINED;CMAKE_INTDIR="Release"</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <DebugInformationFormat>
+      </DebugInformationFormat>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;USE_VENDOR_BLAS;_WINDOWS;NDEBUG;NOMINMAX;_COMPLEX_DEFINED;CMAKE_INTDIR=\"Release\"</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>C:\Hexadrive\superlu\build\SRC;C:\Hexadrive\superlu\SRC;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>C:\Hexadrive\superlu\build\SRC;C:\Hexadrive\superlu\SRC;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Lib>
+      <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>C:\Hexadrive\superlu\build\SRC;C:\Hexadrive\superlu\SRC;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <ExceptionHandling>
+      </ExceptionHandling>
+      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
+      <Optimization>MinSpace</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <UseFullPaths>false</UseFullPaths>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);USE_VENDOR_BLAS;WIN32;_WINDOWS;NDEBUG;NOMINMAX;_COMPLEX_DEFINED;CMAKE_INTDIR="MinSizeRel"</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <DebugInformationFormat>
+      </DebugInformationFormat>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;USE_VENDOR_BLAS;_WINDOWS;NDEBUG;NOMINMAX;_COMPLEX_DEFINED;CMAKE_INTDIR=\"MinSizeRel\"</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>C:\Hexadrive\superlu\build\SRC;C:\Hexadrive\superlu\SRC;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>C:\Hexadrive\superlu\build\SRC;C:\Hexadrive\superlu\SRC;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Lib>
+      <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>C:\Hexadrive\superlu\build\SRC;C:\Hexadrive\superlu\SRC;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <ExceptionHandling>
+      </ExceptionHandling>
+      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
+      <Optimization>MaxSpeed</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <UseFullPaths>false</UseFullPaths>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);USE_VENDOR_BLAS;WIN32;_WINDOWS;NDEBUG;NOMINMAX;_COMPLEX_DEFINED;CMAKE_INTDIR="RelWithDebInfo"</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;USE_VENDOR_BLAS;_WINDOWS;NDEBUG;NOMINMAX;_COMPLEX_DEFINED;CMAKE_INTDIR=\"RelWithDebInfo\"</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>C:\Hexadrive\superlu\build\SRC;C:\Hexadrive\superlu\SRC;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>C:\Hexadrive\superlu\build\SRC;C:\Hexadrive\superlu\SRC;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Lib>
+      <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <CustomBuild Include="C:\Hexadrive\superlu\SRC\CMakeLists.txt">
+      <UseUtf8Encoding>Always</UseUtf8Encoding>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Building Custom Rule C:/Hexadrive/superlu/SRC/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SC:/Hexadrive/superlu -BC:/Hexadrive/superlu/build --check-stamp-file C:/Hexadrive/superlu/build/SRC/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Hexadrive\superlu\SRC\superluConfig.cmake.in;C:\Program Files\CMake\share\cmake-3.28\Modules\BasicConfigVersion-SameMajorVersion.cmake.in;C:\Program Files\CMake\share\cmake-3.28\Modules\CMakePackageConfigHelpers.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\GNUInstallDirs.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\WriteBasicConfigVersionFile.cmake;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Hexadrive\superlu\build\SRC\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Building Custom Rule C:/Hexadrive/superlu/SRC/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SC:/Hexadrive/superlu -BC:/Hexadrive/superlu/build --check-stamp-file C:/Hexadrive/superlu/build/SRC/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Hexadrive\superlu\SRC\superluConfig.cmake.in;C:\Program Files\CMake\share\cmake-3.28\Modules\BasicConfigVersion-SameMajorVersion.cmake.in;C:\Program Files\CMake\share\cmake-3.28\Modules\CMakePackageConfigHelpers.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\GNUInstallDirs.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\WriteBasicConfigVersionFile.cmake;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Hexadrive\superlu\build\SRC\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">Building Custom Rule C:/Hexadrive/superlu/SRC/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SC:/Hexadrive/superlu -BC:/Hexadrive/superlu/build --check-stamp-file C:/Hexadrive/superlu/build/SRC/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\Hexadrive\superlu\SRC\superluConfig.cmake.in;C:\Program Files\CMake\share\cmake-3.28\Modules\BasicConfigVersion-SameMajorVersion.cmake.in;C:\Program Files\CMake\share\cmake-3.28\Modules\CMakePackageConfigHelpers.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\GNUInstallDirs.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\WriteBasicConfigVersionFile.cmake;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\Hexadrive\superlu\build\SRC\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">Building Custom Rule C:/Hexadrive/superlu/SRC/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SC:/Hexadrive/superlu -BC:/Hexadrive/superlu/build --check-stamp-file C:/Hexadrive/superlu/build/SRC/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\Hexadrive\superlu\SRC\superluConfig.cmake.in;C:\Program Files\CMake\share\cmake-3.28\Modules\BasicConfigVersion-SameMajorVersion.cmake.in;C:\Program Files\CMake\share\cmake-3.28\Modules\CMakePackageConfigHelpers.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\GNUInstallDirs.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\WriteBasicConfigVersionFile.cmake;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\Hexadrive\superlu\build\SRC\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="C:\Hexadrive\superlu\SRC\superlu_timer.c">
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">%(AdditionalOptions) -O0</AdditionalOptions>
+      <ScanSourceforModuleDependencies Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</ScanSourceforModuleDependencies>
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Release|x64'">%(AdditionalOptions) -O0</AdditionalOptions>
+      <ScanSourceforModuleDependencies Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</ScanSourceforModuleDependencies>
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">%(AdditionalOptions) -O0</AdditionalOptions>
+      <ScanSourceforModuleDependencies Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</ScanSourceforModuleDependencies>
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">%(AdditionalOptions) -O0</AdditionalOptions>
+      <ScanSourceforModuleDependencies Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">false</ScanSourceforModuleDependencies>
+    </ClCompile>
+    <ClCompile Include="C:\Hexadrive\superlu\SRC\util.c" />
+    <ClCompile Include="C:\Hexadrive\superlu\SRC\memory.c" />
+    <ClCompile Include="C:\Hexadrive\superlu\SRC\get_perm_c.c" />
+    <ClCompile Include="C:\Hexadrive\superlu\SRC\mmd.c" />
+    <ClCompile Include="C:\Hexadrive\superlu\SRC\sp_coletree.c" />
+    <ClCompile Include="C:\Hexadrive\superlu\SRC\sp_preorder.c" />
+    <ClCompile Include="C:\Hexadrive\superlu\SRC\sp_ienv.c" />
+    <ClCompile Include="C:\Hexadrive\superlu\SRC\relax_snode.c" />
+    <ClCompile Include="C:\Hexadrive\superlu\SRC\heap_relax_snode.c" />
+    <ClCompile Include="C:\Hexadrive\superlu\SRC\colamd.c" />
+    <ClCompile Include="C:\Hexadrive\superlu\SRC\ilu_relax_snode.c" />
+    <ClCompile Include="C:\Hexadrive\superlu\SRC\ilu_heap_relax_snode.c" />
+    <ClCompile Include="C:\Hexadrive\superlu\SRC\mark_relax.c" />
+    <ClCompile Include="C:\Hexadrive\superlu\SRC\mc64ad.c" />
+    <ClCompile Include="C:\Hexadrive\superlu\SRC\qselect.c" />
+    <ClCompile Include="C:\Hexadrive\superlu\SRC\input_error.c" />
+    <ClCompile Include="C:\Hexadrive\superlu\SRC\slacon2.c" />
+    <ClCompile Include="C:\Hexadrive\superlu\SRC\smach.c">
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">%(AdditionalOptions) -O0</AdditionalOptions>
+      <ScanSourceforModuleDependencies Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</ScanSourceforModuleDependencies>
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Release|x64'">%(AdditionalOptions) -O0</AdditionalOptions>
+      <ScanSourceforModuleDependencies Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</ScanSourceforModuleDependencies>
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">%(AdditionalOptions) -O0</AdditionalOptions>
+      <ScanSourceforModuleDependencies Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</ScanSourceforModuleDependencies>
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">%(AdditionalOptions) -O0</AdditionalOptions>
+      <ScanSourceforModuleDependencies Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">false</ScanSourceforModuleDependencies>
+    </ClCompile>
+    <ClCompile Include="C:\Hexadrive\superlu\SRC\sgssv.c" />
+    <ClCompile Include="C:\Hexadrive\superlu\SRC\sgssvx.c" />
+    <ClCompile Include="C:\Hexadrive\superlu\SRC\ssp_blas2.c" />
+    <ClCompile Include="C:\Hexadrive\superlu\SRC\ssp_blas3.c" />
+    <ClCompile Include="C:\Hexadrive\superlu\SRC\sgscon.c" />
+    <ClCompile Include="C:\Hexadrive\superlu\SRC\slangs.c" />
+    <ClCompile Include="C:\Hexadrive\superlu\SRC\sgsequ.c" />
+    <ClCompile Include="C:\Hexadrive\superlu\SRC\slaqgs.c" />
+    <ClCompile Include="C:\Hexadrive\superlu\SRC\spivotgrowth.c" />
+    <ClCompile Include="C:\Hexadrive\superlu\SRC\sgsrfs.c" />
+    <ClCompile Include="C:\Hexadrive\superlu\SRC\sgstrf.c" />
+    <ClCompile Include="C:\Hexadrive\superlu\SRC\sgstrs.c" />
+    <ClCompile Include="C:\Hexadrive\superlu\SRC\scopy_to_ucol.c" />
+    <ClCompile Include="C:\Hexadrive\superlu\SRC\ssnode_dfs.c" />
+    <ClCompile Include="C:\Hexadrive\superlu\SRC\ssnode_bmod.c" />
+    <ClCompile Include="C:\Hexadrive\superlu\SRC\spanel_dfs.c" />
+    <ClCompile Include="C:\Hexadrive\superlu\SRC\spanel_bmod.c" />
+    <ClCompile Include="C:\Hexadrive\superlu\SRC\sreadhb.c" />
+    <ClCompile Include="C:\Hexadrive\superlu\SRC\sreadrb.c" />
+    <ClCompile Include="C:\Hexadrive\superlu\SRC\sreadtriple.c" />
+    <ClCompile Include="C:\Hexadrive\superlu\SRC\sreadMM.c" />
+    <ClCompile Include="C:\Hexadrive\superlu\SRC\scolumn_dfs.c" />
+    <ClCompile Include="C:\Hexadrive\superlu\SRC\scolumn_bmod.c" />
+    <ClCompile Include="C:\Hexadrive\superlu\SRC\spivotL.c" />
+    <ClCompile Include="C:\Hexadrive\superlu\SRC\spruneL.c" />
+    <ClCompile Include="C:\Hexadrive\superlu\SRC\smemory.c" />
+    <ClCompile Include="C:\Hexadrive\superlu\SRC\sutil.c" />
+    <ClCompile Include="C:\Hexadrive\superlu\SRC\smyblas2.c" />
+    <ClCompile Include="C:\Hexadrive\superlu\SRC\sgsisx.c" />
+    <ClCompile Include="C:\Hexadrive\superlu\SRC\sgsitrf.c" />
+    <ClCompile Include="C:\Hexadrive\superlu\SRC\sldperm.c" />
+    <ClCompile Include="C:\Hexadrive\superlu\SRC\ilu_sdrop_row.c" />
+    <ClCompile Include="C:\Hexadrive\superlu\SRC\ilu_ssnode_dfs.c" />
+    <ClCompile Include="C:\Hexadrive\superlu\SRC\ilu_scolumn_dfs.c" />
+    <ClCompile Include="C:\Hexadrive\superlu\SRC\ilu_spanel_dfs.c" />
+    <ClCompile Include="C:\Hexadrive\superlu\SRC\ilu_scopy_to_ucol.c" />
+    <ClCompile Include="C:\Hexadrive\superlu\SRC\ilu_spivotL.c" />
+    <ClCompile Include="C:\Hexadrive\superlu\SRC\sdiagonal.c" />
+    <ClCompile Include="C:\Hexadrive\superlu\SRC\dlacon2.c" />
+    <ClCompile Include="C:\Hexadrive\superlu\SRC\dmach.c">
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">%(AdditionalOptions) -O0</AdditionalOptions>
+      <ScanSourceforModuleDependencies Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</ScanSourceforModuleDependencies>
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Release|x64'">%(AdditionalOptions) -O0</AdditionalOptions>
+      <ScanSourceforModuleDependencies Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</ScanSourceforModuleDependencies>
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">%(AdditionalOptions) -O0</AdditionalOptions>
+      <ScanSourceforModuleDependencies Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</ScanSourceforModuleDependencies>
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">%(AdditionalOptions) -O0</AdditionalOptions>
+      <ScanSourceforModuleDependencies Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">false</ScanSourceforModuleDependencies>
+    </ClCompile>
+    <ClCompile Include="C:\Hexadrive\superlu\SRC\dgssv.c" />
+    <ClCompile Include="C:\Hexadrive\superlu\SRC\dgssvx.c" />
+    <ClCompile Include="C:\Hexadrive\superlu\SRC\dsp_blas2.c" />
+    <ClCompile Include="C:\Hexadrive\superlu\SRC\dsp_blas3.c" />
+    <ClCompile Include="C:\Hexadrive\superlu\SRC\dgscon.c" />
+    <ClCompile Include="C:\Hexadrive\superlu\SRC\dlangs.c" />
+    <ClCompile Include="C:\Hexadrive\superlu\SRC\dgsequ.c" />
+    <ClCompile Include="C:\Hexadrive\superlu\SRC\dlaqgs.c" />
+    <ClCompile Include="C:\Hexadrive\superlu\SRC\dpivotgrowth.c" />
+    <ClCompile Include="C:\Hexadrive\superlu\SRC\dgsrfs.c" />
+    <ClCompile Include="C:\Hexadrive\superlu\SRC\dgstrf.c" />
+    <ClCompile Include="C:\Hexadrive\superlu\SRC\dgstrs.c" />
+    <ClCompile Include="C:\Hexadrive\superlu\SRC\dcopy_to_ucol.c" />
+    <ClCompile Include="C:\Hexadrive\superlu\SRC\dsnode_dfs.c" />
+    <ClCompile Include="C:\Hexadrive\superlu\SRC\dsnode_bmod.c" />
+    <ClCompile Include="C:\Hexadrive\superlu\SRC\dpanel_dfs.c" />
+    <ClCompile Include="C:\Hexadrive\superlu\SRC\dpanel_bmod.c" />
+    <ClCompile Include="C:\Hexadrive\superlu\SRC\dreadhb.c" />
+    <ClCompile Include="C:\Hexadrive\superlu\SRC\dreadrb.c" />
+    <ClCompile Include="C:\Hexadrive\superlu\SRC\dreadtriple.c" />
+    <ClCompile Include="C:\Hexadrive\superlu\SRC\dreadMM.c" />
+    <ClCompile Include="C:\Hexadrive\superlu\SRC\dcolumn_dfs.c" />
+    <ClCompile Include="C:\Hexadrive\superlu\SRC\dcolumn_bmod.c" />
+    <ClCompile Include="C:\Hexadrive\superlu\SRC\dpivotL.c" />
+    <ClCompile Include="C:\Hexadrive\superlu\SRC\dpruneL.c" />
+    <ClCompile Include="C:\Hexadrive\superlu\SRC\dmemory.c" />
+    <ClCompile Include="C:\Hexadrive\superlu\SRC\dutil.c" />
+    <ClCompile Include="C:\Hexadrive\superlu\SRC\dmyblas2.c" />
+    <ClCompile Include="C:\Hexadrive\superlu\SRC\dgsisx.c" />
+    <ClCompile Include="C:\Hexadrive\superlu\SRC\dgsitrf.c" />
+    <ClCompile Include="C:\Hexadrive\superlu\SRC\dldperm.c" />
+    <ClCompile Include="C:\Hexadrive\superlu\SRC\ilu_ddrop_row.c" />
+    <ClCompile Include="C:\Hexadrive\superlu\SRC\ilu_dsnode_dfs.c" />
+    <ClCompile Include="C:\Hexadrive\superlu\SRC\ilu_dcolumn_dfs.c" />
+    <ClCompile Include="C:\Hexadrive\superlu\SRC\ilu_dpanel_dfs.c" />
+    <ClCompile Include="C:\Hexadrive\superlu\SRC\ilu_dcopy_to_ucol.c" />
+    <ClCompile Include="C:\Hexadrive\superlu\SRC\ilu_dpivotL.c" />
+    <ClCompile Include="C:\Hexadrive\superlu\SRC\ddiagonal.c" />
+    <ClCompile Include="C:\Hexadrive\superlu\SRC\dGetDiagU.c" />
+    <ClCompile Include="C:\Hexadrive\superlu\SRC\clacon2.c" />
+    <ClCompile Include="C:\Hexadrive\superlu\SRC\scsum1.c" />
+    <ClCompile Include="C:\Hexadrive\superlu\SRC\icmax1.c" />
+    <ClCompile Include="C:\Hexadrive\superlu\SRC\scomplex.c" />
+    <ClCompile Include="C:\Hexadrive\superlu\SRC\cgssv.c" />
+    <ClCompile Include="C:\Hexadrive\superlu\SRC\cgssvx.c" />
+    <ClCompile Include="C:\Hexadrive\superlu\SRC\csp_blas2.c" />
+    <ClCompile Include="C:\Hexadrive\superlu\SRC\csp_blas3.c" />
+    <ClCompile Include="C:\Hexadrive\superlu\SRC\cgscon.c" />
+    <ClCompile Include="C:\Hexadrive\superlu\SRC\clangs.c" />
+    <ClCompile Include="C:\Hexadrive\superlu\SRC\cgsequ.c" />
+    <ClCompile Include="C:\Hexadrive\superlu\SRC\claqgs.c" />
+    <ClCompile Include="C:\Hexadrive\superlu\SRC\cpivotgrowth.c" />
+    <ClCompile Include="C:\Hexadrive\superlu\SRC\cgsrfs.c" />
+    <ClCompile Include="C:\Hexadrive\superlu\SRC\cgstrf.c" />
+    <ClCompile Include="C:\Hexadrive\superlu\SRC\cgstrs.c" />
+    <ClCompile Include="C:\Hexadrive\superlu\SRC\ccopy_to_ucol.c" />
+    <ClCompile Include="C:\Hexadrive\superlu\SRC\csnode_dfs.c" />
+    <ClCompile Include="C:\Hexadrive\superlu\SRC\csnode_bmod.c" />
+    <ClCompile Include="C:\Hexadrive\superlu\SRC\cpanel_dfs.c" />
+    <ClCompile Include="C:\Hexadrive\superlu\SRC\cpanel_bmod.c" />
+    <ClCompile Include="C:\Hexadrive\superlu\SRC\creadhb.c" />
+    <ClCompile Include="C:\Hexadrive\superlu\SRC\creadrb.c" />
+    <ClCompile Include="C:\Hexadrive\superlu\SRC\creadtriple.c" />
+    <ClCompile Include="C:\Hexadrive\superlu\SRC\creadMM.c" />
+    <ClCompile Include="C:\Hexadrive\superlu\SRC\ccolumn_dfs.c" />
+    <ClCompile Include="C:\Hexadrive\superlu\SRC\ccolumn_bmod.c" />
+    <ClCompile Include="C:\Hexadrive\superlu\SRC\cpivotL.c" />
+    <ClCompile Include="C:\Hexadrive\superlu\SRC\cpruneL.c" />
+    <ClCompile Include="C:\Hexadrive\superlu\SRC\cmemory.c" />
+    <ClCompile Include="C:\Hexadrive\superlu\SRC\cutil.c" />
+    <ClCompile Include="C:\Hexadrive\superlu\SRC\cmyblas2.c" />
+    <ClCompile Include="C:\Hexadrive\superlu\SRC\cgsisx.c" />
+    <ClCompile Include="C:\Hexadrive\superlu\SRC\cgsitrf.c" />
+    <ClCompile Include="C:\Hexadrive\superlu\SRC\cldperm.c" />
+    <ClCompile Include="C:\Hexadrive\superlu\SRC\ilu_cdrop_row.c" />
+    <ClCompile Include="C:\Hexadrive\superlu\SRC\ilu_csnode_dfs.c" />
+    <ClCompile Include="C:\Hexadrive\superlu\SRC\ilu_ccolumn_dfs.c" />
+    <ClCompile Include="C:\Hexadrive\superlu\SRC\ilu_cpanel_dfs.c" />
+    <ClCompile Include="C:\Hexadrive\superlu\SRC\ilu_ccopy_to_ucol.c" />
+    <ClCompile Include="C:\Hexadrive\superlu\SRC\ilu_cpivotL.c" />
+    <ClCompile Include="C:\Hexadrive\superlu\SRC\cdiagonal.c" />
+    <ClCompile Include="C:\Hexadrive\superlu\SRC\zlacon2.c" />
+    <ClCompile Include="C:\Hexadrive\superlu\SRC\dzsum1.c" />
+    <ClCompile Include="C:\Hexadrive\superlu\SRC\izmax1.c" />
+    <ClCompile Include="C:\Hexadrive\superlu\SRC\dcomplex.c" />
+    <ClCompile Include="C:\Hexadrive\superlu\SRC\zgssv.c" />
+    <ClCompile Include="C:\Hexadrive\superlu\SRC\zgssvx.c" />
+    <ClCompile Include="C:\Hexadrive\superlu\SRC\zsp_blas2.c" />
+    <ClCompile Include="C:\Hexadrive\superlu\SRC\zsp_blas3.c" />
+    <ClCompile Include="C:\Hexadrive\superlu\SRC\zgscon.c" />
+    <ClCompile Include="C:\Hexadrive\superlu\SRC\zlangs.c" />
+    <ClCompile Include="C:\Hexadrive\superlu\SRC\zgsequ.c" />
+    <ClCompile Include="C:\Hexadrive\superlu\SRC\zlaqgs.c" />
+    <ClCompile Include="C:\Hexadrive\superlu\SRC\zpivotgrowth.c" />
+    <ClCompile Include="C:\Hexadrive\superlu\SRC\zgsrfs.c" />
+    <ClCompile Include="C:\Hexadrive\superlu\SRC\zgstrf.c" />
+    <ClCompile Include="C:\Hexadrive\superlu\SRC\zgstrs.c" />
+    <ClCompile Include="C:\Hexadrive\superlu\SRC\zcopy_to_ucol.c" />
+    <ClCompile Include="C:\Hexadrive\superlu\SRC\zsnode_dfs.c" />
+    <ClCompile Include="C:\Hexadrive\superlu\SRC\zsnode_bmod.c" />
+    <ClCompile Include="C:\Hexadrive\superlu\SRC\zpanel_dfs.c" />
+    <ClCompile Include="C:\Hexadrive\superlu\SRC\zpanel_bmod.c" />
+    <ClCompile Include="C:\Hexadrive\superlu\SRC\zreadhb.c" />
+    <ClCompile Include="C:\Hexadrive\superlu\SRC\zreadrb.c" />
+    <ClCompile Include="C:\Hexadrive\superlu\SRC\zreadtriple.c" />
+    <ClCompile Include="C:\Hexadrive\superlu\SRC\zreadMM.c" />
+    <ClCompile Include="C:\Hexadrive\superlu\SRC\zcolumn_dfs.c" />
+    <ClCompile Include="C:\Hexadrive\superlu\SRC\zcolumn_bmod.c" />
+    <ClCompile Include="C:\Hexadrive\superlu\SRC\zpivotL.c" />
+    <ClCompile Include="C:\Hexadrive\superlu\SRC\zpruneL.c" />
+    <ClCompile Include="C:\Hexadrive\superlu\SRC\zmemory.c" />
+    <ClCompile Include="C:\Hexadrive\superlu\SRC\zutil.c" />
+    <ClCompile Include="C:\Hexadrive\superlu\SRC\zmyblas2.c" />
+    <ClCompile Include="C:\Hexadrive\superlu\SRC\zgsisx.c" />
+    <ClCompile Include="C:\Hexadrive\superlu\SRC\zgsitrf.c" />
+    <ClCompile Include="C:\Hexadrive\superlu\SRC\zldperm.c" />
+    <ClCompile Include="C:\Hexadrive\superlu\SRC\ilu_zdrop_row.c" />
+    <ClCompile Include="C:\Hexadrive\superlu\SRC\ilu_zsnode_dfs.c" />
+    <ClCompile Include="C:\Hexadrive\superlu\SRC\ilu_zcolumn_dfs.c" />
+    <ClCompile Include="C:\Hexadrive\superlu\SRC\ilu_zpanel_dfs.c" />
+    <ClCompile Include="C:\Hexadrive\superlu\SRC\ilu_zcopy_to_ucol.c" />
+    <ClCompile Include="C:\Hexadrive\superlu\SRC\ilu_zpivotL.c" />
+    <ClCompile Include="C:\Hexadrive\superlu\SRC\zdiagonal.c" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="C:\Hexadrive\superlu\build\ZERO_CHECK.vcxproj">
+      <Project>{5CDB39D8-93D0-3B4D-9E18-CDC3BD0CA8AE}</Project>
+      <Name>ZERO_CHECK</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
