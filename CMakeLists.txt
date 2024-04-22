@@ -14,6 +14,7 @@ set(PROJECT_VERSION ${VERSION_MAJOR}.${VERSION_MINOR}.${VERSION_BugFix})
 #MESSAGE("\nProcess XSDK defaults ...")
 #SET(USE_XSDK_DEFAULTS_DEFAULT TRUE) # Set to false if desired
 #INCLUDE("cmake/XSDKDefaults.cmake")
+
 set(USE_XSDK_DEFAULTS TRUE)
 
 # The XSDK standard does not allow using internally built BLAS
@@ -45,11 +46,15 @@ option(enable_complex   "Enable complex precision library" ON)
 option(enable_complex16 "Enable complex16 precision library" ON)
 option(enable_matlabmex "Build the Matlab mex library" OFF)
 option(enable_doc       "Add target 'doc' to build Doxygen documentation" OFF)
-option(enable_examples  "Build examples" ON)
+option(enable_examples  "Build examples" OFF)
 option(enable_fortran   "Build Fortran interface" ${enable_fortran_xSDK})
-option(enable_tests     "Build tests" ON)
+option(enable_tests     "Build tests" OFF)
+option(enable_EXAMPLE_subfolder     "Example subfolder" OFF)
 
-include(CTest)
+if(PROJECT_SOURCE_DIR STREQUAL CMAKE_SOURCE_DIR)
+    include(CTest)
+endif()
+
 include(GNUInstallDirs)
 include(FeatureSummary)
 
@@ -111,7 +116,7 @@ option(TPL_METIS_INCLUDE_DIRS "List of absolute paths to METIS include directori
 # setup required compiler defines and options.
 ## get_directory_property( DirDefs COMPILE_DEFINITIONS )
 #set(CMAKE_C_FLAGS "-DPRNTlevel=0 -DDEBUGlevel=0 ${CMAKE_C_FLAGS}")
-
+set(CMAKE_CXX_STANDARD 20)
 set(CMAKE_C_FLAGS_RELEASE "-O3" CACHE STRING "")
 
 if(XSDK_INDEX_SIZE EQUAL 64)
@@ -129,6 +134,9 @@ endif()
 ######################################################################
 #
 #--------------------- BLAS ---------------------
+set(MKL_FIND_REQUIRED TRUE)
+include(FindMKL)
+
 if(NOT enable_internal_blaslib)
   if (TPL_BLAS_LIBRARIES)
     set(BLAS_FOUND TRUE)
@@ -207,8 +215,10 @@ endif()
 #
 # Include directories
 #
+message("hereIam")
 ######################################################################
 include_directories(${CMAKE_BINARY_DIR}/SRC) # For superlu_config.h
+message("hereIam1")
 if (TPL_METIS_INCLUDE_DIRS)
   include_directories(${TPL_METIS_INCLUDE_DIRS})  ## metis
 endif ()
@@ -247,12 +257,15 @@ if(enable_tests)
   add_subdirectory(TESTING)
 endif()
 
-add_custom_target(examples)
+
 if (enable_fortran)
   add_subdirectory(FORTRAN)
 endif()
 
-add_subdirectory(EXAMPLE)
+if (enable_EXAMPLE_subfolder)
+    add_custom_target(examples)
+    add_subdirectory(EXAMPLE)
+endif()
 
 if (enable_doc)
    add_subdirectory(DOC)

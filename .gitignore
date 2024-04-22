@@ -12,4 +12,5 @@
 
 # Visual Studio
 /.vs
-/out/build
+/build
+/CMakeFiles

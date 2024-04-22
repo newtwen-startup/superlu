@@ -234,7 +234,14 @@ if(enable_complex16)
 endif()
 
 add_library(superlu ${sources})
-target_link_libraries(superlu PUBLIC ${BLAS_LIB} ${METIS_LIB})
+target_link_libraries(superlu PUBLIC ${BLAS_LIB})
+if(DEFINED METIS_LIB)
+    if (NOT ${METIS_LIB} STREQUAL "METIS_LIB-NOTFOUND")
+        message(${METIS_LIB} "so qua aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa")
+        target_link_libraries(superlu PUBLIC ${METIS_LIB})
+    endif()
+endif()
+
 if (NOT WIN32)
   target_link_libraries(superlu PUBLIC m)
 endif ()
@@ -292,3 +299,4 @@ export(EXPORT superluTargets
   )
 
 export(PACKAGE superlu)
+message(${CMAKE_INSTALL_LIBDIR}/cmake/superlu " ----------should be here")
